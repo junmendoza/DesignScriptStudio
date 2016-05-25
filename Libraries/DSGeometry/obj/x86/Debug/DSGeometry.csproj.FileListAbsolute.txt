@@ -1,0 +1,5 @@
+C:\jun\Projects\DS_IDE\bin\x86\Debug\DSGeometry.dll
+C:\jun\Projects\DS_IDE\bin\x86\Debug\DSGeometry.pdb
+C:\jun\Projects\DS_IDE\Libraries\DSGeometry\obj\x86\Debug\DSGeometry.csprojResolveAssemblyReference.cache
+C:\jun\Projects\DS_IDE\Libraries\DSGeometry\obj\x86\Debug\DSGeometry.dll
+C:\jun\Projects\DS_IDE\Libraries\DSGeometry\obj\x86\Debug\DSGeometry.pdb

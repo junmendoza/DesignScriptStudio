@@ -1,0 +1,7 @@
+C:\jun\Projects\DS_IDE\bin\x86\Debug\DesignScriptLauncher.exe
+C:\jun\Projects\DS_IDE\bin\x86\Debug\DesignScriptLauncher.pdb
+C:\jun\Projects\DS_IDE\UIs\DesignScriptLauncher\obj\x86\Debug\DesignScriptLauncher.csprojResolveAssemblyReference.cache
+C:\jun\Projects\DS_IDE\UIs\DesignScriptLauncher\obj\x86\Debug\DesignScriptLauncher.Resource.resources
+C:\jun\Projects\DS_IDE\UIs\DesignScriptLauncher\obj\x86\Debug\DesignScriptLauncher.csproj.GenerateResource.Cache
+C:\jun\Projects\DS_IDE\UIs\DesignScriptLauncher\obj\x86\Debug\DesignScriptLauncher.exe
+C:\jun\Projects\DS_IDE\UIs\DesignScriptLauncher\obj\x86\Debug\DesignScriptLauncher.pdb

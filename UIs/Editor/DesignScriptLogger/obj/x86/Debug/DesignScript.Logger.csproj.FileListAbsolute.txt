@@ -1,0 +1,5 @@
+C:\jun\Projects\DS_IDE\UIs\Prototype\bin\x86\Debug\DesignScript.Logger.dll
+C:\jun\Projects\DS_IDE\UIs\Prototype\bin\x86\Debug\DesignScript.Logger.pdb
+C:\jun\Projects\DS_IDE\UIs\Editor\DesignScriptLogger\obj\x86\Debug\DesignScript.Logger.csprojResolveAssemblyReference.cache
+C:\jun\Projects\DS_IDE\UIs\Editor\DesignScriptLogger\obj\x86\Debug\DesignScript.Logger.dll
+C:\jun\Projects\DS_IDE\UIs\Editor\DesignScriptLogger\obj\x86\Debug\DesignScript.Logger.pdb

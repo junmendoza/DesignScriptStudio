@@ -1,0 +1,5 @@
+C:\jun\Projects\DS_IDE\bin\x86\Debug\Math.dll
+C:\jun\Projects\DS_IDE\bin\x86\Debug\Math.pdb
+C:\jun\Projects\DS_IDE\Libraries\Math\obj\x86\Debug\Math.csprojResolveAssemblyReference.cache
+C:\jun\Projects\DS_IDE\Libraries\Math\obj\x86\Debug\Math.dll
+C:\jun\Projects\DS_IDE\Libraries\Math\obj\x86\Debug\Math.pdb

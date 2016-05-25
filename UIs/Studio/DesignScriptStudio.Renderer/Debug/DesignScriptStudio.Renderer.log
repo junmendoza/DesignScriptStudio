@@ -1,0 +1,42 @@
+﻿Build started 5/24/2016 8:22:51 PM.
+     1>Project "C:\jun\Projects\DS_IDE\UIs\Studio\DesignScriptStudio.Renderer\DesignScriptStudio.Renderer.vcxproj" on node 5 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\\" /AI"C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral" /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\Facades\\" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDLL /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Yc"stdafx.h" /Fp"Debug\DesignScriptStudio.Renderer.pch" /Fo"Debug\\" /Fd"Debug\vc140.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\mscorlib.dll" /FUC:\jun\Projects\DS_IDE\bin\x86\Debug\ProtoInterface.dll /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Xml.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\WindowsBase.dll" /analyze- /errorReport:prompt /clr:nostdlib Stdafx.cpp
+         Stdafx.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\\" /AI"C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral" /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\Facades\\" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDLL /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Yu"stdafx.h" /Fp"Debug\DesignScriptStudio.Renderer.pch" /Fo"Debug\\" /Fd"Debug\vc140.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\mscorlib.dll" /FUC:\jun\Projects\DS_IDE\bin\x86\Debug\ProtoInterface.dll /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Xml.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\WindowsBase.dll" /analyze- /errorReport:prompt /clr:nostdlib AssemblyInfo.cpp Camera.cpp OpenGL.cpp RenderPackage.cpp RenderPackageImpl.cpp RenderServiceImpl.cpp RenderThread.cpp RenderService.cpp ThumbnailPool.cpp
+         AssemblyInfo.cpp
+     1>AssemblyInfo.cpp(36): warning C4947: 'RequestMinimum': marked as obsolete
+         AssemblyInfo.cpp(36): note: Message: 'Assembly level declarative security is obsolete and is no longer enforced by the CLR by default. See http://go.microsoft.com/fwlink/?LinkID=155570 for more information.'
+         Camera.cpp
+         OpenGL.cpp
+         RenderPackage.cpp
+         RenderPackageImpl.cpp
+         RenderServiceImpl.cpp
+         RenderThread.cpp
+     1>RenderThread.cpp(111): warning C4477: 'swprintf_s' : format string '%S' requires an argument of type 'char *', but variadic argument 1 has type 'const void *'
+         RenderService.cpp
+         ThumbnailPool.cpp
+         Generating Code...
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDLL /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fp"Debug\DesignScriptStudio.Renderer.pch" /Fa"Debug\\" /Fo"Debug\\" /Fd"Debug\vc140.pdb" /analyze- /errorReport:prompt "C:\Users\jun\AppData\Local\Temp\.NETFramework,Version=v4.5.2.AssemblyAttributes.cpp"
+         .NETFramework,Version=v4.5.2.AssemblyAttributes.cpp
+       ResourceCompile:
+         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\rc.exe /D _UNICODE /D UNICODE /l"0x0409" /nologo /fo"Debug\app.res" app.rc 
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\jun\Projects\DS_IDE\bin\x86\Debug\DesignScriptStudio.Renderer.dll" /INCREMENTAL /NOLOGO User32.lib Gdi32.lib opengl32.lib glu32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\jun\Projects\DS_IDE\bin\x86\Debug\DesignScriptStudio.Renderer.pdb" /ASSEMBLYDEBUG /TLBID:1 /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 /DLL Debug\app.res
+         Debug\AssemblyInfo.obj
+         Debug\Camera.obj
+         Debug\OpenGL.obj
+         Debug\RenderPackage.obj
+         Debug\RenderPackageImpl.obj
+         Debug\RenderServiceImpl.obj
+         Debug\RenderThread.obj
+         Debug\RenderService.obj
+         Debug\Stdafx.obj
+         Debug\ThumbnailPool.obj
+         "Debug\.NETFramework,Version=v4.5.2.AssemblyAttributes.obj"
+         DesignScriptStudio.Renderer.vcxproj -> C:\jun\Projects\DS_IDE\bin\x86\Debug\DesignScriptStudio.Renderer.dll
+     1>Done Building Project "C:\jun\Projects\DS_IDE\UIs\Studio\DesignScriptStudio.Renderer\DesignScriptStudio.Renderer.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:25.06

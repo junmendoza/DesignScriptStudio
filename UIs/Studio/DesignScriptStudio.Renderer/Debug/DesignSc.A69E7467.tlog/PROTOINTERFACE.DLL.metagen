@@ -1,0 +1,792 @@
+ImageRuntimeVersion: v4.0.30319
+Assembly ProtoInterface, Version=0.1.*, Culture=Invariant Language (Invariant Country): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Interface Autodesk.DesignScript.Interfaces.IDesignScriptEntity: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Interfaces:
+    System.IDisposable
+  Properties:
+    System.Object Owner 'get ' : 
+  Methods:
+    get_Owner(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    SetOwner(Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface Autodesk.DesignScript.Interfaces.IColor: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Properties:
+    Byte AlphaValue 'get ' : 
+    Byte RedValue 'get ' : 
+    Byte GreenValue 'get ' : 
+    Byte BlueValue 'get ' : 
+  Methods:
+    get_AlphaValue(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_RedValue(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_GreenValue(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_BlueValue(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Interface Autodesk.DesignScript.Interfaces.IVector: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Properties:
+    Double X   'get ' : 
+    Double Y   'get ' : 
+    Double Z   'get ' : 
+  Methods:
+    get_X(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Y(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Z(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Interface Autodesk.DesignScript.Interfaces.IDisplayable: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Interfaces:
+    System.IDisposable
+  Properties:
+    Boolean Visible 'get set' : 
+    Autodesk.DesignScript.Interfaces.IColor Color 'get set' : 
+  Methods:
+    Highlight(Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    SetColor(IColor): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    SetVisibility(Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_Visible(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Visible(Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Color(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Color(IColor): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Interface Autodesk.DesignScript.Interfaces.IPersistentObject: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Interfaces:
+    System.IDisposable
+  Properties:
+    Autodesk.DesignScript.Interfaces.IGeometryEntity Geometry 'get ' : 
+    Autodesk.DesignScript.Interfaces.IDisplayable Display 'get ' : 
+  Methods:
+    Erase(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_Geometry(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Display(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Interface Autodesk.DesignScript.Interfaces.IPersistenceManager: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Properties:
+    Autodesk.DesignScript.Interfaces.IGeometryFactory GeometryFactory 'get set' : 
+  Methods:
+    Persist(IDesignScriptEntity): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    UpdateDisplay(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetPersistentObjectFromHandle(Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_GeometryFactory(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_GeometryFactory(IGeometryFactory): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    SupportsGeometryCapture(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    CaptureGeometry(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    FromObject(Int64): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface Autodesk.DesignScript.Interfaces.ICoordinateSystemEntity: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Interfaces:
+    Autodesk.DesignScript.Interfaces.IDesignScriptEntity
+    System.IDisposable
+  Properties:
+    Autodesk.DesignScript.Interfaces.IPointEntity Origin 'get ' : 
+    Autodesk.DesignScript.Interfaces.IVector XAxis 'get ' : 
+    Autodesk.DesignScript.Interfaces.IVector YAxis 'get ' : 
+    Autodesk.DesignScript.Interfaces.IVector ZAxis 'get ' : 
+    Autodesk.DesignScript.Interfaces.IDisplayable Display 'get ' : 
+  Methods:
+    Inverse(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    PostMultiplyBy(ICoordinateSystemEntity): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    PreMultiplyBy(ICoordinateSystemEntity): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Rotation(Double, IVector, IPointEntity): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Scale(Double, Double, Double): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Translate(IVector): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    IsSingular(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    IsScaledOrtho(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    IsUniscaledOrtho(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetDeterminant(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetScaleFactors(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    IsEqualTo(ICoordinateSystemEntity): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Set(IPointEntity, IVector, IVector, IVector): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_Origin(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_XAxis(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_YAxis(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ZAxis(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Display(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Interface Autodesk.DesignScript.Interfaces.IGeometryData: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Properties:
+    IntPtr EntityPtr 'get ' : 
+    IntPtr BodyPtr 'get ' : 
+  Methods:
+    get_EntityPtr(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_BodyPtr(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Interface Autodesk.DesignScript.Interfaces.IGeometryEntity: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Interfaces:
+    Autodesk.DesignScript.Interfaces.IDesignScriptEntity
+    System.IDisposable
+  Methods:
+    Clone(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    CopyAndTranslate(IVector): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    CopyAndTransform(ICoordinateSystemEntity, ICoordinateSystemEntity): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    DistanceTo(IPointEntity): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetClosestPoint(IPointEntity): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface Autodesk.DesignScript.Interfaces.IPointEntity: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Interfaces:
+    Autodesk.DesignScript.Interfaces.IGeometryEntity
+    Autodesk.DesignScript.Interfaces.IDesignScriptEntity
+    System.IDisposable
+  Properties:
+    Double X   'get ' : 
+    Double Y   'get ' : 
+    Double Z   'get ' : 
+  Methods:
+    get_X(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Y(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Z(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Interface Autodesk.DesignScript.Interfaces.ICurveEntity: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Interfaces:
+    Autodesk.DesignScript.Interfaces.IGeometryEntity
+    Autodesk.DesignScript.Interfaces.IDesignScriptEntity
+    System.IDisposable
+  Properties:
+    Boolean IsPlanar 'get ' : 
+    Boolean IsClosed 'get ' : 
+    Autodesk.DesignScript.Interfaces.IPointEntity StartPoint 'get ' : 
+    Autodesk.DesignScript.Interfaces.IPointEntity EndPoint 'get ' : 
+  Methods:
+    TangentAtParameter(Double): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    NormalAtParameter(Double): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    DistanceAtParameter(Double): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    ParameterAtDistance(Double): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    StartParameter(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    EndParameter(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetLength(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    PointAtParameter(Double): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    PointAtDistance(Double): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    ParameterAtPoint(IPointEntity): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetClosestPointTo(IPointEntity, Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetClosestPointTo(IPointEntity, IVector, Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Reverse(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_IsPlanar(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_IsClosed(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_StartPoint(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_EndPoint(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    GetClosestPointTo(ICurveEntity): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetOffsetCurve(Double): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    IntersectWith(ISolidEntity): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    IntersectWith(ISurfaceEntity): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    IntersectWith(IPlaneEntity): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    IntersectWith(ICurveEntity): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Project(IPointEntity, IVector): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    ProjectOn(IPlaneEntity, IVector): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    ProjectOn(ISurfaceEntity, IVector): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Trim(Double[], Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Trim(Double, Double, Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Split(Double[]): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    JoinWith(ICurveEntity[]): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    JoinWith(ICurveEntity[], Double): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Extrude(IVector, Double): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface Autodesk.DesignScript.Interfaces.ILineEntity: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Interfaces:
+    Autodesk.DesignScript.Interfaces.ICurveEntity
+    Autodesk.DesignScript.Interfaces.IGeometryEntity
+    Autodesk.DesignScript.Interfaces.IDesignScriptEntity
+    System.IDisposable
+  Methods:
+    UpdateEndPoints(IPointEntity, IPointEntity): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface Autodesk.DesignScript.Interfaces.ICircleEntity: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Interfaces:
+    Autodesk.DesignScript.Interfaces.ICurveEntity
+    Autodesk.DesignScript.Interfaces.IGeometryEntity
+    Autodesk.DesignScript.Interfaces.IDesignScriptEntity
+    System.IDisposable
+  Properties:
+    Autodesk.DesignScript.Interfaces.IPointEntity CenterPoint 'get ' : 
+    Autodesk.DesignScript.Interfaces.IVector Normal 'get ' : 
+    Double Radius 'get ' : 
+  Methods:
+    get_CenterPoint(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Normal(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Radius(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Interface Autodesk.DesignScript.Interfaces.IArcEntity: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Interfaces:
+    Autodesk.DesignScript.Interfaces.ICurveEntity
+    Autodesk.DesignScript.Interfaces.IGeometryEntity
+    Autodesk.DesignScript.Interfaces.IDesignScriptEntity
+    System.IDisposable
+  Properties:
+    Autodesk.DesignScript.Interfaces.IPointEntity CenterPoint 'get ' : 
+    Double Radius 'get ' : 
+    Double StartAngle 'get ' : 
+    Double SweepAngle 'get ' : 
+    Autodesk.DesignScript.Interfaces.IVector Normal 'get ' : 
+  Methods:
+    get_CenterPoint(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Radius(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_StartAngle(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_SweepAngle(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Normal(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Interface Autodesk.DesignScript.Interfaces.IBSplineCurveEntity: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Interfaces:
+    Autodesk.DesignScript.Interfaces.ICurveEntity
+    Autodesk.DesignScript.Interfaces.IGeometryEntity
+    Autodesk.DesignScript.Interfaces.IDesignScriptEntity
+    System.IDisposable
+  Methods:
+    GetControlVertices(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetKnots(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetWeights(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetDegree(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetIsPeriodic(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetIsClosed(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetIsRational(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface Autodesk.DesignScript.Interfaces.IBRepEntity: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Methods:
+    GetFaces(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetEdges(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetVertices(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetVertexCount(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetEdgeCount(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetFaceCount(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface Autodesk.DesignScript.Interfaces.ISurfaceEntity: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Interfaces:
+    Autodesk.DesignScript.Interfaces.IGeometryEntity
+    Autodesk.DesignScript.Interfaces.IDesignScriptEntity
+    System.IDisposable
+  Methods:
+    UpdateSurfaceByLoftedCrossSections(ICurveEntity[]): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    UpdateSurfaceByLoftedCrossSectionsPath(ICurveEntity[], ICurveEntity): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    UpdateSurfaceByLoftFromCrossSectionsGuides(ICurveEntity[], ICurveEntity[]): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    UpdateSweep(ICurveEntity, ICurveEntity): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    UpdateRevolve(ICurveEntity, IPointEntity, IVector, Double, Double): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Thicken(Double, Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Offset(Double): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetBsplineSurface(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetNormalAtPoint(IPointEntity): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    TangentAtUParameter(Double, Double): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    TangentAtVParameter(Double, Double): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    CurvatureAtParameter(Double, Double): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    PointAtParameter(Double, Double): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    NormalAtPoint(IPointEntity): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Trim(ICurveEntity[], IPlaneEntity[], ISurfaceEntity[], ISolidEntity[], IPointEntity, Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Split(IPlaneEntity): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Split(IPlaneEntity, ISurfaceEntity[]&, ISurfaceEntity[]&): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Split(ISurfaceEntity): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    SubtractFrom(IGeometryEntity): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetUVParameterAtPoint(IPointEntity): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetArea(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetPerimeter(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetIsClosedInU(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetIsClosedInV(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetIsClosed(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetOffsetSurface(Double): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    ConvertToBSplineSurface(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    ApproxBSpline(Double): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    IntersectWith(IPlaneEntity): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    IntersectWith(ISurfaceEntity): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Project(IGeometryEntity, IVector): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface Autodesk.DesignScript.Interfaces.IBSplineSurfaceEntity: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Interfaces:
+    Autodesk.DesignScript.Interfaces.ISurfaceEntity
+    Autodesk.DesignScript.Interfaces.IGeometryEntity
+    Autodesk.DesignScript.Interfaces.IDesignScriptEntity
+    System.IDisposable
+  Methods:
+    GetUDegree(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetVDegree(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetNumPolesAlongU(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetNumPolesAlongV(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetIsPeriodicInU(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetIsPeriodicInV(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetIsRational(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetPoles(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetPoints(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetUKnots(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetVKnots(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetWeights(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    NormalAtParameter(Double, Double): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetIsolines(Int32, Double): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    UpdateByPoles(IPointEntity[][], Int32, Int32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    UpdateByPoints(IPointEntity[][], Int32, Int32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface Autodesk.DesignScript.Interfaces.IPlaneEntity: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Interfaces:
+    Autodesk.DesignScript.Interfaces.IGeometryEntity
+    Autodesk.DesignScript.Interfaces.IDesignScriptEntity
+    System.IDisposable
+  Properties:
+    Autodesk.DesignScript.Interfaces.IPointEntity Origin 'get ' : 
+    Autodesk.DesignScript.Interfaces.IVector Normal 'get ' : 
+  Methods:
+    get_Origin(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Normal(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    GetCoordinateSystem(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Project(IPointEntity, IVector): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    IntersectWith(IPlaneEntity): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Update(IPointEntity, IVector): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface Autodesk.DesignScript.Interfaces.ISolidEntity: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Interfaces:
+    Autodesk.DesignScript.Interfaces.IGeometryEntity
+    Autodesk.DesignScript.Interfaces.IDesignScriptEntity
+    System.IDisposable
+    Autodesk.DesignScript.Interfaces.IBRepEntity
+  Methods:
+    GetArea(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetVolume(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetCentroid(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    IsNonManifold(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    UnionWith(IGeometryEntity): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    NonRegularUnionWith(IGeometryEntity): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    NonRegularUnionWithMany(IGeometryEntity[]): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    NonRegularImpose(ISolidEntity): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    SubtractFrom(IGeometryEntity): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    IntersectWith(ISolidEntity): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    IntersectWith(IPlaneEntity): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Project(IGeometryEntity, IVector): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    IntersectWith(ISurfaceEntity): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    SliceWithPlane(IPlaneEntity): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Trim(IPlaneEntity[], ISurfaceEntity[], ISolidEntity[], IPointEntity): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    NonRegularSliceWithPlane(IPlaneEntity): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    NonRegularSliceWithPlanes(IPlaneEntity[]): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    SliceWithSurface(ISurfaceEntity): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    SliceWithSurfaces(ISurfaceEntity[]): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    NonRegularSliceWithSurface(ISurfaceEntity): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    NonRegularSliceWithSurfaces(ISurfaceEntity[]): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    ThinShell(Double, Double): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    UpdateSolidByLoftFromCrossSectionsGuides(ICurveEntity[], ICurveEntity[]): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    UpdateSolidByLoftedCrossSectionsPath(ICurveEntity[], ICurveEntity): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    UpdateSolidByLoftedCrossSections(ICurveEntity[]): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    UpdateSolidBySweep(ICurveEntity, ICurveEntity): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    UpdateSolidByRevolve(ICurveEntity, IPointEntity, IVector, Double, Double): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    SeparateSolid(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Regularise(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetShells(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetCells(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    SliceWithPlanes(IPlaneEntity[]): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetCellCount(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetShellCount(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface Autodesk.DesignScript.Interfaces.IPrimitiveSolidEntity: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Interfaces:
+    Autodesk.DesignScript.Interfaces.ISolidEntity
+    Autodesk.DesignScript.Interfaces.IGeometryEntity
+    Autodesk.DesignScript.Interfaces.IDesignScriptEntity
+    System.IDisposable
+    Autodesk.DesignScript.Interfaces.IBRepEntity
+  Methods:
+    GetCoordinateSystem(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface Autodesk.DesignScript.Interfaces.IConeEntity: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Interfaces:
+    Autodesk.DesignScript.Interfaces.IPrimitiveSolidEntity
+    Autodesk.DesignScript.Interfaces.ISolidEntity
+    Autodesk.DesignScript.Interfaces.IGeometryEntity
+    Autodesk.DesignScript.Interfaces.IDesignScriptEntity
+    System.IDisposable
+    Autodesk.DesignScript.Interfaces.IBRepEntity
+  Methods:
+    UpdateCone(IPointEntity, IPointEntity, Double, Double): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    UpdateCylinder(Double[], Double, Double, Double): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetStartPoint(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetEndPoint(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetRadiusRatio(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetStartRadius(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetHeight(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface Autodesk.DesignScript.Interfaces.ICuboidEntity: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Interfaces:
+    Autodesk.DesignScript.Interfaces.IPrimitiveSolidEntity
+    Autodesk.DesignScript.Interfaces.ISolidEntity
+    Autodesk.DesignScript.Interfaces.IGeometryEntity
+    Autodesk.DesignScript.Interfaces.IDesignScriptEntity
+    System.IDisposable
+    Autodesk.DesignScript.Interfaces.IBRepEntity
+  Methods:
+    UpdateCuboid(Double[], Double, Double, Double): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetLength(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetWidth(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetHeight(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface Autodesk.DesignScript.Interfaces.ISphereEntity: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Interfaces:
+    Autodesk.DesignScript.Interfaces.IPrimitiveSolidEntity
+    Autodesk.DesignScript.Interfaces.ISolidEntity
+    Autodesk.DesignScript.Interfaces.IGeometryEntity
+    Autodesk.DesignScript.Interfaces.IDesignScriptEntity
+    System.IDisposable
+    Autodesk.DesignScript.Interfaces.IBRepEntity
+  Methods:
+    UpdateSphere(IPointEntity, Double): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetCenterPoint(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetRadius(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface Autodesk.DesignScript.Interfaces.IPolygonEntity: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Interfaces:
+    Autodesk.DesignScript.Interfaces.IGeometryEntity
+    Autodesk.DesignScript.Interfaces.IDesignScriptEntity
+    System.IDisposable
+  Methods:
+    Trim(IPlaneEntity[]): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetVertices(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetPlane(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetOutOfPlane(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    UpdateVertices(IPointEntity[]): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface Autodesk.DesignScript.Interfaces.ISubDMeshEntity: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Interfaces:
+    Autodesk.DesignScript.Interfaces.IGeometryEntity
+    Autodesk.DesignScript.Interfaces.IDesignScriptEntity
+    System.IDisposable
+  Methods:
+    GetNumVertices(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetVertices(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetVertexColors(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetVertexNormals(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetNumFaces(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetFaceIndices(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetNumResultVertices(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetResultVertices(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetNumResultFaces(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetResultFaceIndices(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetEdges(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    ComputeSurfaceArea(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetIsClosed(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    ComputeVolume(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    UpdateByVerticesFaceIndices(IPointEntity[], Int32[][], Int32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    UpdateSubDMeshColors(IPointEntity[], IVector[], IColor[], Int32[][], Int32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    UpdateSubDMeshColors(IColor[]): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    UpdateSubDMeshNormals(IVector[]): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    ConvertToSurface(Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    ConvertToSolid(Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface Autodesk.DesignScript.Interfaces.IBlockEntity: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Interfaces:
+    Autodesk.DesignScript.Interfaces.IGeometryEntity
+    Autodesk.DesignScript.Interfaces.IDesignScriptEntity
+    System.IDisposable
+  Methods:
+    GetBlockName(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetFileName(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetCentroid(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    ExtractGeometry(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface Autodesk.DesignScript.Interfaces.IBlockHelper: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Methods:
+    InsertBlockFromFile(ICoordinateSystemEntity, String, String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    InsertBlockFromCurrentDocument(ICoordinateSystemEntity, String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    InsertBlockInTargetFile(ICoordinateSystemEntity, String, String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    ImportBlockFromFile(String, String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    ImportAllBlocksFromFile(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    ListAllBlocksInCurrentDocument(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    BlockExistsInCurrentDocument(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    ListContentsOfBlock(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    DefineBlock(ICoordinateSystemEntity, String, IGeometryEntity[]): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    RenameBlock(String, String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    ExportBlock(String, String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    ExportBlockDefinition(String, String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    PurgeBlock(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface Autodesk.DesignScript.Interfaces.ITopologyEntity: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Interfaces:
+    Autodesk.DesignScript.Interfaces.IDesignScriptEntity
+    System.IDisposable
+Interface Autodesk.DesignScript.Interfaces.IShellEntity: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Interfaces:
+    Autodesk.DesignScript.Interfaces.ITopologyEntity
+    Autodesk.DesignScript.Interfaces.IDesignScriptEntity
+    System.IDisposable
+  Methods:
+    GetSolidGeometry(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetFaces(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetFaceCount(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface Autodesk.DesignScript.Interfaces.ICellEntity: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Interfaces:
+    Autodesk.DesignScript.Interfaces.ITopologyEntity
+    Autodesk.DesignScript.Interfaces.IDesignScriptEntity
+    System.IDisposable
+  Methods:
+    GetSolidGeometry(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetFaces(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetCentroid(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetArea(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetVolume(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetAdjacentCells(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetFaceCount(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface Autodesk.DesignScript.Interfaces.IFaceEntity: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Interfaces:
+    Autodesk.DesignScript.Interfaces.ITopologyEntity
+    Autodesk.DesignScript.Interfaces.IDesignScriptEntity
+    System.IDisposable
+  Methods:
+    GetCellFaces(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetShell(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetCells(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetCentroid(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetArea(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetEdges(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetVertices(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetSurfaceGeometry(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetFaceType(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetCellFaceCount(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetCellCount(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetEdgeCount(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetVertexCount(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    IsPlanar(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface Autodesk.DesignScript.Interfaces.ICellFaceEntity: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Interfaces:
+    Autodesk.DesignScript.Interfaces.ITopologyEntity
+    Autodesk.DesignScript.Interfaces.IDesignScriptEntity
+    System.IDisposable
+  Methods:
+    GetCell(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetFace(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface Autodesk.DesignScript.Interfaces.IVertexEntity: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Interfaces:
+    Autodesk.DesignScript.Interfaces.ITopologyEntity
+    Autodesk.DesignScript.Interfaces.IDesignScriptEntity
+    System.IDisposable
+  Methods:
+    GetAdjacentEdges(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetAdjacentFaces(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetPointGeometry(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetAdjacentEdgeCount(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetAdjacentFaceCount(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface Autodesk.DesignScript.Interfaces.IEdgeEntity: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Interfaces:
+    Autodesk.DesignScript.Interfaces.ITopologyEntity
+    Autodesk.DesignScript.Interfaces.IDesignScriptEntity
+    System.IDisposable
+  Methods:
+    GetAdjacentFaces(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetStartVertex(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetEndVertex(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetCurveGeometry(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetAdjacentFaceCount(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface Autodesk.DesignScript.Interfaces.IMeshEntity: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Interfaces:
+    Autodesk.DesignScript.Interfaces.ITopologyEntity
+    Autodesk.DesignScript.Interfaces.IDesignScriptEntity
+    System.IDisposable
+    Autodesk.DesignScript.Interfaces.IBRepEntity
+  Properties:
+    Autodesk.DesignScript.Interfaces.IGeometryEntity Geometry 'get ' : 
+  Methods:
+    get_Geometry(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Interface Autodesk.DesignScript.Interfaces.ITextEntity: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Interfaces:
+    Autodesk.DesignScript.Interfaces.IGeometryEntity
+    Autodesk.DesignScript.Interfaces.IDesignScriptEntity
+    System.IDisposable
+  Methods:
+    UpdateByCoordinateSystem(ICoordinateSystemEntity, Int32, String, Double): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetFontSize(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetString(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface Autodesk.DesignScript.Interfaces.IGeometrySettings: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Properties:
+    Boolean PointVisibility 'get set' : 
+  Methods:
+    get_PointVisibility(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_PointVisibility(Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Interface Autodesk.DesignScript.Interfaces.IGeometryFactory: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Methods:
+    CoordinateSystemByData(Double[]): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    CoordinateSystemByCylindricalCoordinates(ICoordinateSystemEntity, Double, Double, Double): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    CoordinateSystemBySphericalCoordinates(ICoordinateSystemEntity, Double, Double, Double): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    CoordinateSystemByUniversalTransform(ICoordinateSystemEntity, Double[], Double[], Int32[], IVector, Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    CoordinateSystemByUniversalTransform(ICoordinateSystemEntity, Double[], Double[], Int32[], Double[], Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    CreatePoint(Double, Double, Double): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    BSplineByControlVertices(IPointEntity[], Int32, Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    BSplineByPoints(IPointEntity[], Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    BSplineByPoints(IPointEntity[], IVector, IVector): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    ArcByPointsOnCurve(IPointEntity, IPointEntity, IPointEntity): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    ArcByCenterPointRadiusAngle(IPointEntity, Double, Double, Double, IVector): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    ArcByCenterPointStartPointSweepAngle(IPointEntity, IPointEntity, Double, IVector): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    ArcByCenterPointStartPointSweepPoint(IPointEntity, IPointEntity, IPointEntity): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    LineByStartPointEndPoint(IPointEntity, IPointEntity): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    PlaneByOriginNormal(IPointEntity, IVector): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    PointByCartesianCoordinates(ICoordinateSystemEntity, Double, Double, Double): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    CircleByCenterPointRadius(IPointEntity, Double, IVector): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    CircleByPointsOnCurve(IPointEntity, IPointEntity, IPointEntity): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    SurfaceByLoftCrossSections(ICurveEntity[]): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    SurfaceByLoftCrossSectionsPath(ICurveEntity[], ICurveEntity): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    SurfaceByLoftCrossSectionsGuides(ICurveEntity[], ICurveEntity[]): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    SurfaceBySweep(ICurveEntity, ICurveEntity): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    SurfaceByRevolve(ICurveEntity, IPointEntity, IVector, Double, Double): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    SurfacePatchFromCurve(ICurveEntity): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    BSplineSurfaceByControlVertices(IPointEntity[][], Int32, Int32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    BSplineSurfaceByPoints(IPointEntity[][], Int32, Int32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    SolidByLoftCrossSections(ICurveEntity[]): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    SolidByLoftCrossSectionsGuides(ICurveEntity[], ICurveEntity[]): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    SolidByLoftCrossSectionsPath(ICurveEntity[], ICurveEntity): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    SolidBySweep(ICurveEntity, ICurveEntity): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    SolidByRevolve(ICurveEntity, IPointEntity, IVector, Double, Double): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    ConeByPointsRadius(IPointEntity, IPointEntity, Double, Double): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    ConeByRadiusLength(ICoordinateSystemEntity, Double, Double, Double): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    SphereByCenterPointRadius(IPointEntity, Double): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    CuboidByLengths(ICoordinateSystemEntity, Double, Double, Double): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    PolygonByVertices(IPointEntity[]): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    SubDMeshByVerticesFaceIndices(IPointEntity[], Int32[][], Int32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    SubDMeshByVerticesFaceIndices(IPointEntity[], Int32[][], IVector[], IColor[], Int32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    SubDMeshFromGeometry(IGeometryEntity, Double): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    MeshByVerticesFaceIndices(IPointEntity[], Int32[][]): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    MeshByVerticesEdgeIndices(IPointEntity[], Int32[]): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    TextByCoordinateSystem(ICoordinateSystemEntity, Int32, String, Double): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetBlockHelper(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    LoadSat(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    SaveSat(String, Object[]): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetSettings(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface Autodesk.DesignScript.Interfaces.IGraphEditorHostApplication: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Properties:
+    System.Collections.Generic.Dictionary`2[System.String,System.Object] Configurations 'get ' : 
+  Methods:
+    get_Configurations(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    PostGraphUpdate(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GraphActivated(UInt32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface Autodesk.DesignScript.Interfaces.IConfiguration: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Properties:
+    System.String RootModulePath 'get ' : 
+    System.String[] IncludeDirectories 'get ' : 
+  Methods:
+    get_RootModulePath(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_IncludeDirectories(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    GetConfigValue(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    SetConfigValue(String, Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class Autodesk.DesignScript.Interfaces.ConfigurationKeys: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String GeometryFactory : Public, Static, InitOnly
+    System.String PersistentManager : Public, Static, InitOnly
+    System.String GeometryProvider : Public, Static, InitOnly
+    System.String SessionDatabase : Public, Static, InitOnly
+    System.String SessionKey : Public, Static, InitOnly
+    System.String RequestExplicitLock : Public, Static, InitOnly
+    System.String RecordingUserActions : Public, Static, InitOnly
+    System.String ClearPersistedObjects : Public, Static, InitOnly
+    System.String GeometricPreviewEnabled : Public, Static, InitOnly
+    System.String FilteredClasses : Public, Static, InitOnly
+    System.String GeometryXmlProperties : Public, Static, InitOnly
+Interface Autodesk.DesignScript.Interfaces.IExecutionSession: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Properties:
+    Autodesk.DesignScript.Interfaces.IConfiguration Configuration 'get ' : 
+  Methods:
+    get_Configuration(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    SearchFile(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface Autodesk.DesignScript.Interfaces.IExtensionApplication: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Methods:
+    StartUp(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    OnBeginExecution(IExecutionSession): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    OnSuspendExecution(IExecutionSession): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    OnResumeExecution(IExecutionSession): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    OnEndExecution(IExecutionSession): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    ShutDown(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface Autodesk.DesignScript.Interfaces.IContextData: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Properties:
+    System.String Name 'get ' : 
+    System.Object Data 'get ' : 
+    Autodesk.DesignScript.Interfaces.IContextDataProvider ContextProvider 'get ' : 
+  Events:
+    System.EventHandler DataChanged: 
+  Methods:
+    get_Name(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Data(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    add_DataChanged(EventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    remove_DataChanged(EventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ContextProvider(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Interface Autodesk.DesignScript.Interfaces.IContextDataProvider: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Properties:
+    System.String Name 'get ' : 
+  Methods:
+    get_Name(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    ImportData(Dictionary`2): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    ExportData(IContextData[], String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    CaptureData(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetExpression(Dictionary`2, String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface Autodesk.DesignScript.Interfaces.IRenderPackage: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Properties:
+    IntPtr NativeRenderPackage 'get ' : 
+  Methods:
+    PushPointVertex(Double, Double, Double): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    PushPointVertexColor(Byte, Byte, Byte, Byte): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    PushTriangleVertex(Double, Double, Double): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    PushTriangleVertexNormal(Double, Double, Double): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    PushTriangleVertexColor(Byte, Byte, Byte, Byte): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    PushLineStripVertex(Double, Double, Double): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    PushLineStripVertexCount(Int32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    PushLineStripVertexColor(Byte, Byte, Byte, Byte): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_NativeRenderPackage(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Interface Autodesk.DesignScript.Interfaces.IGraphicItem: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Methods:
+    Tessellate(IRenderPackage): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface Autodesk.DesignScript.Interfaces.IGraphicDataProvider: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Methods:
+    GetGraphicItems(Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Tessellate(List`1, IRenderPackage): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class Autodesk.DesignScript.Geometry.GeometryFactory: AutoLayout, AnsiClass, Class, Public, Abstract, BeforeFieldInit
+  Interfaces:
+    Autodesk.DesignScript.Interfaces.IGeometryFactory
+  Methods:
+    CoordinateSystemByData(Double[]): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    CoordinateSystemByCylindricalCoordinates(ICoordinateSystemEntity, Double, Double, Double): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    CoordinateSystemBySphericalCoordinates(ICoordinateSystemEntity, Double, Double, Double): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    CoordinateSystemByUniversalTransform(ICoordinateSystemEntity, Double[], Double[], Int32[], IVector, Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    CoordinateSystemByUniversalTransform(ICoordinateSystemEntity, Double[], Double[], Int32[], Double[], Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    CreatePoint(Double, Double, Double): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    BSplineByControlVertices(IPointEntity[], Int32, Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    BSplineByPoints(IPointEntity[], Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    BSplineByPoints(IPointEntity[], IVector, IVector): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    ArcByPointsOnCurve(IPointEntity, IPointEntity, IPointEntity): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    ArcByCenterPointRadiusAngle(IPointEntity, Double, Double, Double, IVector): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    ArcByCenterPointStartPointSweepAngle(IPointEntity, IPointEntity, Double, IVector): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    ArcByCenterPointStartPointSweepPoint(IPointEntity, IPointEntity, IPointEntity): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    LineByStartPointEndPoint(IPointEntity, IPointEntity): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    PlaneByOriginNormal(IPointEntity, IVector): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    PointByCartesianCoordinates(ICoordinateSystemEntity, Double, Double, Double): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    CircleByCenterPointRadius(IPointEntity, Double, IVector): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    CircleByPointsOnCurve(IPointEntity, IPointEntity, IPointEntity): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    SurfaceByLoftCrossSections(ICurveEntity[]): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    SurfaceByLoftCrossSectionsPath(ICurveEntity[], ICurveEntity): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    SurfaceByLoftCrossSectionsGuides(ICurveEntity[], ICurveEntity[]): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    SurfaceBySweep(ICurveEntity, ICurveEntity): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    SurfaceByRevolve(ICurveEntity, IPointEntity, IVector, Double, Double): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    SurfacePatchFromCurve(ICurveEntity): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    BSplineSurfaceByControlVertices(IPointEntity[][], Int32, Int32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    BSplineSurfaceByPoints(IPointEntity[][], Int32, Int32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    SolidByLoftCrossSections(ICurveEntity[]): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    SolidByLoftCrossSectionsGuides(ICurveEntity[], ICurveEntity[]): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    SolidByLoftCrossSectionsPath(ICurveEntity[], ICurveEntity): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    SolidBySweep(ICurveEntity, ICurveEntity): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    SolidByRevolve(ICurveEntity, IPointEntity, IVector, Double, Double): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    ConeByPointsRadius(IPointEntity, IPointEntity, Double, Double): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    ConeByRadiusLength(ICoordinateSystemEntity, Double, Double, Double): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    SphereByCenterPointRadius(IPointEntity, Double): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    CuboidByLengths(ICoordinateSystemEntity, Double, Double, Double): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    PolygonByVertices(IPointEntity[]): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    SubDMeshByVerticesFaceIndices(IPointEntity[], Int32[][], Int32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    SubDMeshByVerticesFaceIndices(IPointEntity[], Int32[][], IVector[], IColor[], Int32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    SubDMeshFromGeometry(IGeometryEntity, Double): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    TextByCoordinateSystem(ICoordinateSystemEntity, Int32, String, Double): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    GetBlockHelper(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    LoadSat(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    SaveSat(String, Object[]): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    GetSettings(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    MeshByVerticesFaceIndices(IPointEntity[], Int32[][]): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    MeshByVerticesEdgeIndices(IPointEntity[], Int32[]): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class Autodesk.DesignScript.Geometry.PersistenceManager: AutoLayout, AnsiClass, Class, Public, Abstract, BeforeFieldInit
+  Interfaces:
+    Autodesk.DesignScript.Interfaces.IPersistenceManager
+  Properties:
+    Autodesk.DesignScript.Interfaces.IGeometryFactory GeometryFactory 'get set' : 
+  Methods:
+    Persist(IDesignScriptEntity): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    UpdateDisplay(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    GetPersistentObjectFromHandle(Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_GeometryFactory(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_GeometryFactory(IGeometryFactory): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    SupportsGeometryCapture(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    CaptureGeometry(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    FromObject(Int64): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class Autodesk.DesignScript.Runtime.ExtensionApplicationAttribute: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Attribute
+    Void .ctor(System.Type): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.Type Type 'get set' : 
+  Methods:
+    get_Type(): PrivateScope, Public, HideBySig, SpecialName
+Class Autodesk.DesignScript.Runtime.GraphicDataProviderAttribute: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Attribute
+    Void .ctor(System.Type): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.Type Type 'get set' : 
+  Methods:
+    get_Type(): PrivateScope, Public, HideBySig, SpecialName
+Class Autodesk.DesignScript.Runtime.ContextDataProviderAttribute: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Attribute
+    Void .ctor(System.Type, System.Func`1[System.Boolean]): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Type): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.Type Type 'get set' : 
+    Boolean CapturesData 'get ' : 
+  Methods:
+    get_Type(): PrivateScope, Public, HideBySig, SpecialName
+    get_CapturesData(): PrivateScope, Public, HideBySig, SpecialName
+Class Autodesk.DesignScript.Runtime.AllowRankReductionAttribute: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Attribute
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    ReduceRank(Object): PrivateScope, Public, HideBySig
+    IsRankReducible(Object): PrivateScope, Public, Static, HideBySig

@@ -1,0 +1,4 @@
+C:\jun\Projects\DS_IDE\bin\x86\Debug\ProtoImperative.dll
+C:\jun\Projects\DS_IDE\bin\x86\Debug\ProtoImperative.pdb
+C:\jun\Projects\DS_IDE\Core\ProtoImperative\obj\x86\Debug\ProtoImperative.dll
+C:\jun\Projects\DS_IDE\Core\ProtoImperative\obj\x86\Debug\ProtoImperative.pdb

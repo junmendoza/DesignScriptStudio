@@ -1,0 +1,1 @@
+C:\jun\Projects\DS_IDE\UIs\Studio\DesignScriptStudio.Tests\obj\x86\Debug\DesignScriptStudio.Tests.csprojResolveAssemblyReference.cache

@@ -1,0 +1,5 @@
+C:\jun\Projects\DS_IDE\bin\x86\Debug\ProtoAssociative.dll
+C:\jun\Projects\DS_IDE\bin\x86\Debug\ProtoAssociative.pdb
+C:\jun\Projects\DS_IDE\Core\ProtoAssociative\obj\x86\Debug\ProtoAssociative.csprojResolveAssemblyReference.cache
+C:\jun\Projects\DS_IDE\Core\ProtoAssociative\obj\x86\Debug\ProtoAssociative.dll
+C:\jun\Projects\DS_IDE\Core\ProtoAssociative\obj\x86\Debug\ProtoAssociative.pdb

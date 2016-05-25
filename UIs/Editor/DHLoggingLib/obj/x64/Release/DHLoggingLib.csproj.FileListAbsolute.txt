@@ -1,0 +1,3 @@
+C:\jun\Projects\DS_IDE\UIs\Prototype\bin\x64\Release\DHLoggingLib.dll
+C:\jun\Projects\DS_IDE\UIs\Editor\DHLoggingLib\obj\x64\Release\DHLoggingLib.csprojResolveAssemblyReference.cache
+C:\jun\Projects\DS_IDE\UIs\Editor\DHLoggingLib\obj\x64\Release\DHLoggingLib.dll

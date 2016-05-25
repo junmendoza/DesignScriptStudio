@@ -1,0 +1,5 @@
+C:\jun\Projects\DS_IDE\Core\ProtoCore\obj\x86\Debug\ProtoCore.csprojResolveAssemblyReference.cache
+C:\jun\Projects\DS_IDE\bin\x86\Debug\ProtoCore.dll
+C:\jun\Projects\DS_IDE\bin\x86\Debug\ProtoCore.pdb
+C:\jun\Projects\DS_IDE\Core\ProtoCore\obj\x86\Debug\ProtoCore.dll
+C:\jun\Projects\DS_IDE\Core\ProtoCore\obj\x86\Debug\ProtoCore.pdb

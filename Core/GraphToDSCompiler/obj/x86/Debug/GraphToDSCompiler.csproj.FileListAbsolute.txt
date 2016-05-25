@@ -1,0 +1,7 @@
+C:\jun\Projects\DS_IDE\Core\GraphToDSCompiler\obj\x86\Debug\GraphToDSCompiler.csprojResolveAssemblyReference.cache
+C:\jun\Projects\DS_IDE\Core\GraphToDSCompiler\obj\x86\Debug\GraphToDSCompiler.Properties.Resources.resources
+C:\jun\Projects\DS_IDE\Core\GraphToDSCompiler\obj\x86\Debug\GraphToDSCompiler.csproj.GenerateResource.Cache
+C:\jun\Projects\DS_IDE\bin\x86\Debug\GraphToDSCompiler.dll
+C:\jun\Projects\DS_IDE\bin\x86\Debug\GraphToDSCompiler.pdb
+C:\jun\Projects\DS_IDE\Core\GraphToDSCompiler\obj\x86\Debug\GraphToDSCompiler.dll
+C:\jun\Projects\DS_IDE\Core\GraphToDSCompiler\obj\x86\Debug\GraphToDSCompiler.pdb

@@ -1,0 +1,5 @@
+C:\jun\Projects\DS_IDE\bin\x86\Debug\ProtoInterface.dll
+C:\jun\Projects\DS_IDE\bin\x86\Debug\ProtoInterface.pdb
+C:\jun\Projects\DS_IDE\ProtoInterface\obj\x86\Debug\ProtoInterface.csprojResolveAssemblyReference.cache
+C:\jun\Projects\DS_IDE\ProtoInterface\obj\x86\Debug\ProtoInterface.dll
+C:\jun\Projects\DS_IDE\ProtoInterface\obj\x86\Debug\ProtoInterface.pdb

@@ -1,0 +1,1 @@
+C:\jun\Projects\DS_IDE\Tests\ProtoTestFx\obj\x86\Debug\ProtoTestFx.csprojResolveAssemblyReference.cache

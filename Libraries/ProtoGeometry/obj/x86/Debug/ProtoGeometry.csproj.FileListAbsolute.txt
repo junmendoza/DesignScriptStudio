@@ -1,0 +1,7 @@
+C:\jun\Projects\DS_IDE\bin\x86\Debug\ProtoGeometry.dll
+C:\jun\Projects\DS_IDE\bin\x86\Debug\ProtoGeometry.pdb
+C:\jun\Projects\DS_IDE\Libraries\ProtoGeometry\obj\x86\Debug\ProtoGeometry.csprojResolveAssemblyReference.cache
+C:\jun\Projects\DS_IDE\Libraries\ProtoGeometry\obj\x86\Debug\Autodesk.DesignScript.Geometry.Properties.Resources.resources
+C:\jun\Projects\DS_IDE\Libraries\ProtoGeometry\obj\x86\Debug\ProtoGeometry.csproj.GenerateResource.Cache
+C:\jun\Projects\DS_IDE\Libraries\ProtoGeometry\obj\x86\Debug\ProtoGeometry.dll
+C:\jun\Projects\DS_IDE\Libraries\ProtoGeometry\obj\x86\Debug\ProtoGeometry.pdb

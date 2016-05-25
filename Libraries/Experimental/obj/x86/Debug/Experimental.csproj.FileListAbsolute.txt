@@ -1,0 +1,5 @@
+C:\jun\Projects\DS_IDE\bin\x86\Debug\Experimental.dll
+C:\jun\Projects\DS_IDE\bin\x86\Debug\Experimental.pdb
+C:\jun\Projects\DS_IDE\Libraries\Experimental\obj\x86\Debug\Experimental.csprojResolveAssemblyReference.cache
+C:\jun\Projects\DS_IDE\Libraries\Experimental\obj\x86\Debug\Experimental.dll
+C:\jun\Projects\DS_IDE\Libraries\Experimental\obj\x86\Debug\Experimental.pdb
