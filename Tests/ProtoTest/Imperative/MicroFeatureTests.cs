@@ -1334,7 +1334,7 @@ local;
             ProtoCore.DSASM.Mirror.DsasmArray arr = (ProtoCore.DSASM.Mirror.DsasmArray)o.Payload;
             Assert.IsTrue((Int64)arr.members[0].Payload == 2);
         }
-        [Test, Ignore("")]
+        [Test,Ignore("")]
         public void TestTryCatch001()
         {
             String code =
@@ -1379,7 +1379,7 @@ x;t2;y2;y3;t3;z;
             Assert.IsTrue((Int64)mirror.GetValue("t3").Payload == 300);
             Assert.IsTrue((Int64)mirror.GetValue("z").Payload == 2);
         }
-        [Test, Ignore("")]
+        [Test,Ignore("")]
         public void TestTryCatch002()
         {
             string code = @"
@@ -1438,7 +1438,7 @@ x;y1;y2;y3;y4;y5;y6;z;
             Assert.IsTrue((Int64)mirror.GetValue("y6").Payload == 0);
             Assert.IsTrue((Int64)mirror.GetValue("z").Payload == 5);
         }
-        [Test, Ignore("")] // Jun: Ignore for now until we allow deeply nested function definitions
+        [Test,Ignore("")] // Jun: Ignore for now until we allow deeply nested function definitions
         public void TestTryCatchStackUnwinding01()
         {
             string code = @"    y0 = 0;
@@ -1519,7 +1519,7 @@ x;y1;y2;y3;y4;y5;y6;z;
             Assert.IsTrue((Int64)mirror.GetValue("y12").Payload == 0);
             Assert.IsTrue((Int64)mirror.GetValue("y13").Payload == 13);
         }
-        [Test, Ignore("")]
+        [Test,Ignore("")]
         public void TestTryCatchGetExceptionValue01()
         {
             string code = @"y = 0;
@@ -1538,7 +1538,7 @@ x;y1;y2;y3;y4;y5;y6;z;
             ExecutionMirror mirror = thisTest.RunScriptSource(code);
             Assert.IsTrue((Int64)mirror.GetValue("y").Payload == 3);
         }
-        [Test, Ignore("")]
+        [Test,Ignore("")]
         public void TestTryCatchGetExceptionValue02()
         {
             string code = @"y = 0;
@@ -1563,7 +1563,7 @@ x;y1;y2;y3;y4;y5;y6;z;
             ExecutionMirror mirror = thisTest.RunScriptSource(code);
             Assert.IsTrue((Int64)mirror.GetValue("y").Payload == 3);
         }
-        [Test, Ignore("")]
+        [Test,Ignore("")]
         public void TestTryCatchGetExceptionValue03()
         {
             string code = @"y = 0;

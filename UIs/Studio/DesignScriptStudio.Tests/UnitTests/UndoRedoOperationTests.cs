@@ -1978,7 +1978,7 @@ namespace DesignScriptStudio.Tests.UnitTests
             Assert.AreEqual(8, controller.GetVisualNodes().Count);
         }
 
-        [Ignore]
+       [Ignore("")]
         public void UndoRedoMove_TestFunctionNodeWithNoInputSolt()
         {
             // Create GeometrySettings, Reset and Identity nodes.

@@ -56,6 +56,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>$(FINAL_BIN)\DesignScript.Editor.Common.dll</HintPath>
     </Reference>
+    <Reference Include="DesignScriptStudio.Renderer, Version=1.0.5990.35609, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\bin\x64\Debug\DesignScriptStudio.Renderer.dll</HintPath>
+    </Reference>
     <Reference Include="GraphToDSCompiler">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>$(FINAL_BIN)\GraphToDSCompiler.dll</HintPath>

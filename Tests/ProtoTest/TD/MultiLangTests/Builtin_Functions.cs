@@ -722,7 +722,7 @@ result =
             thisTest.Verify("a2", v4, 0);
             thisTest.Verify("result", 1, 0);
         }
-        [Test, Ignore("")]
+        [Test,Ignore("")]
         [Category("SmokeTest")]
         public void T021_CountTrue_ModifierStack()
         {
@@ -1040,7 +1040,7 @@ result =
             thisTest.Verify("a2", v4, 0);
             thisTest.Verify("result", 1, 0);
         }
-        [Test, Ignore("")]
+        [Test,Ignore("")]
         [Category("SmokeTest")]
         public void T032_CountFalse_ModifierStack()
         {

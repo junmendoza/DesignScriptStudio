@@ -25,7 +25,7 @@ namespace ProtoTest
             //DLLFFIHandler.Env = ProtoFFI.CPPModuleHelper.GetEnv(); 
             //DLLFFIHandler.Register(FFILanguage.CPlusPlus, new ProtoFFI.PInvokeModuleHelper()); 
         }
-        [Test, Ignore("")]
+        [Test,Ignore("")]
         public static void TestMinFac()
         {
             Assert.Ignore("Testing old C++ FFI. Ignored");

@@ -65,7 +65,7 @@ namespace DesignScriptStudio.Tests.UnitTests
         }
 
         [Test]
-        [Ignore] // to create regression to nunit in jenkins - will remove this - Monika
+       [Ignore("")] // to create regression to nunit in jenkins - will remove this - Monika
         public void TestSerializeDeserialize()
         {
             IGraphController graphController = new GraphController(null);

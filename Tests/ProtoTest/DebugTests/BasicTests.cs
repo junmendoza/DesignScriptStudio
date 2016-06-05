@@ -2553,7 +2553,7 @@ a =
             Assert.IsTrue((Int64)startLineNo == 0);
             Assert.IsTrue((Int64)startCharNo == 0);
         }
-        [Test, Ignore("")]
+        [Test,Ignore("")]
         [Category("Debugger")]
         public void TestStepNextClass()
         {

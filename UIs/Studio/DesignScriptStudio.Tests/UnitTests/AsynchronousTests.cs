@@ -24,7 +24,7 @@ namespace DesignScriptStudio.Tests.UnitTests
             ClassFactory.DestroyCoreComponent();
         }
 
-        [Ignore]
+        [Ignore("")]
         public void TestSimpleAddition()
         {
             // 1. Create code block node with value of 123.

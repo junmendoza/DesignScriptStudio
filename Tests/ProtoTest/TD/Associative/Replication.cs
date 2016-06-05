@@ -2922,7 +2922,7 @@ a = fun({{1.0}, {2.0}});";
             //Assert.Fail("1467075 - Sprint23 : rev 2660 : replication with nested array is not working as expected");
             thisTest.Verify("a", new Object[] { new Object[] { 4.0 }, new Object[] { 4.0 } });
         }
-        [Test, Ignore("")]
+        [Test,Ignore("")]
         [Category("Replication")]
         public void T63_Defect_1467177_replication_in_imperative()
         {
@@ -3931,7 +3931,7 @@ y = x;
             Object n1 = null;
             thisTest.Verify("y", new Object[] { 10, 2, 2, 2, 14, 15, n1, n1, n1, n1, 2 });
         }
-        [Test, Ignore("")]
+        [Test,Ignore("")]
         [Category("Replication")]
         public void T73_Defect_1467069_2()
         {
@@ -4002,7 +4002,7 @@ y2 = a1.foo();
             thisTest.Verify("y1", new Object[] { 11, 3, 3, 3, 15, 16, null, null, 1, 1, 1 });
             thisTest.Verify("y2", new Object[] { 10, 2, 2, 2, 14, 15, null, null, 0, 0, 0 });
         }
-        [Test, Ignore("")]
+        [Test,Ignore("")]
         [Category("Replication")]
         public void T74_Defect_1463465()
         {

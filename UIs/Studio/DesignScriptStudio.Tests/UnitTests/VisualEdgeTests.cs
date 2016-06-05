@@ -24,7 +24,7 @@ namespace DesignScriptStudio.Tests.UnitTests
         }
 
         [Test]
-        [Ignore]
+       [Ignore("")]
         public void TestDeserilaizeOperationException()
         {
             IStorage storage = new BinaryStorage();
@@ -42,7 +42,7 @@ namespace DesignScriptStudio.Tests.UnitTests
         }
 
         [Test]
-        [Ignore]
+       [Ignore("")]
         public void TestDeserializeNullException()
         {
             IStorage storage = null;
@@ -57,7 +57,7 @@ namespace DesignScriptStudio.Tests.UnitTests
         }
 
         [Test]
-        [Ignore]
+       [Ignore("")]
         public void TestSerializeNullException()
         {
             IStorage storage = null;
@@ -72,7 +72,7 @@ namespace DesignScriptStudio.Tests.UnitTests
         }
 
         [Test]
-        [Ignore]
+       [Ignore("")]
         public void TestSerializeDeserialize()
         {
             IStorage storage = new BinaryStorage();
@@ -115,7 +115,7 @@ namespace DesignScriptStudio.Tests.UnitTests
         }
 
         [Test]
-        [Ignore]
+       [Ignore("")]
         public void TestCreate02()
         {
             IStorage storage = new BinaryStorage();

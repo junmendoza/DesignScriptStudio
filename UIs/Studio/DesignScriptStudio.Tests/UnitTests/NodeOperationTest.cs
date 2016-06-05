@@ -2266,7 +2266,7 @@ MouseUp|e:System.Windows.Input.MouseButton,Left|u:0xffffffff|e:DesignScriptStudi
         }
 
         [Test]
-        [Ignore]
+       [Ignore("")]
         public void Defect_IDE_2204()
         {
             // Expected to fail as the LiveRunner will not be created in the Nunit.

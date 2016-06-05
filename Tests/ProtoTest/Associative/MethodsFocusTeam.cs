@@ -4002,7 +4002,7 @@ r2 = n.foo();
             thisTest.Verify("r1", v1);
             thisTest.Verify("r2", v2);
         }
-        [Test, Ignore("")]
+        [Test,Ignore("")]
         public void T055_ReplicationWithDiffTypesInArr_UserDefined()
         {
             String code =

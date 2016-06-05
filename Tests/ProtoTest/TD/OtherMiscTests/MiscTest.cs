@@ -13,7 +13,7 @@ namespace ProtoTest.TD.OtherMiscTests
         public void Setup()
         {
         }
-        [Test, Ignore("")]
+        [Test,Ignore("")]
         [Category("SmokeTest")]
         public void Fibunacci()
         {
@@ -773,7 +773,7 @@ n = Count(arr);
             ExecutionMirror mirror = thisTest.RunScriptSource(code);
             thisTest.Verify("n", 4);
         }
-        [Test, Ignore("")]
+        [Test,Ignore("")]
         public void imperative_Replication_1467070()
         {
             // need to move this to post R1 project
@@ -799,7 +799,7 @@ return = t;
             ExecutionMirror mirror = thisTest.RunScriptSource(code);
             thisTest.Verify("t", new Object[] { null, null, 3, 4, 5 });
         }
-        [Test, Ignore("")]
+        [Test,Ignore("")]
         public void imperative_Replication_1467070_2()
         {
             // need to move this to post R1 project

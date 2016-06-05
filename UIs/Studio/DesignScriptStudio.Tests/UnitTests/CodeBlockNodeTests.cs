@@ -701,7 +701,7 @@ namespace DesignScriptStudio.Tests.UnitTests
             Assert.AreEqual(true, result);
         }
 
-        [Ignore]
+       [Ignore("")]
         public void L04TestLiteral_Delete_Createnew_click()
         {
             // Create Single literal node
@@ -726,7 +726,7 @@ namespace DesignScriptStudio.Tests.UnitTests
             Assert.AreEqual(1, controller.GetSlots().Count);//output slot. */
         }
 
-        [Ignore]
+       [Ignore("")]
         public void L06TestLiteral_move()
         {
             // Create Single literal node
@@ -1760,7 +1760,7 @@ namespace DesignScriptStudio.Tests.UnitTests
 
             Assert.AreEqual(1, controller.GetVisualNodes().Count);
         }
-        [Ignore]
+       [Ignore("")]
         public void Test_CatchError()
         {
             // to demonstrate how to catch error mesg 
@@ -2146,7 +2146,7 @@ namespace DesignScriptStudio.Tests.UnitTests
             Assert.AreEqual(true, result);
 
         }
-        [Ignore]
+       [Ignore("")]
         public void T44_Preview_1566()
         {
             // Error nodes must not have preview

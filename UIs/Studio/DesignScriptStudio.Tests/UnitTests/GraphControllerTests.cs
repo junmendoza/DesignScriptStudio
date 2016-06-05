@@ -66,7 +66,7 @@ namespace DesignScriptStudio.Tests.UnitTests
             Assert.AreEqual(true, result);
         }
 
-        [Ignore]
+       [Ignore("")]
         public void TestReconnectionCrash()
         {
             // 1. Create three literal nodes
@@ -188,7 +188,7 @@ namespace DesignScriptStudio.Tests.UnitTests
             Assert.AreEqual(true, result);
         }
 
-        [Ignore]
+       [Ignore("")]
         public void TestLiteralInputSlotClicking()
         {
             // 1. Create a literal node.

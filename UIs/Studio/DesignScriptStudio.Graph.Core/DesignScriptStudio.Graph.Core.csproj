@@ -55,6 +55,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>$(FINAL_BIN)\DesignScript.Logger.dll</HintPath>
     </Reference>
+    <Reference Include="DesignScriptStudio.Renderer, Version=1.0.5990.37216, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\bin\x64\Debug\DesignScriptStudio.Renderer.dll</HintPath>
+    </Reference>
     <Reference Include="GraphToDSCompiler">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>$(FINAL_BIN)\GraphToDSCompiler.dll</HintPath>
@@ -167,12 +171,6 @@
     <Resource Include="Resources\library.xml">
       <SubType>Designer</SubType>
     </Resource>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\DesignScriptStudio.Renderer\DesignScriptStudio.Renderer.vcxproj">
-      <Project>{A69E7467-7A33-4242-AEA2-984B41130F54}</Project>
-      <Name>DesignScriptStudio.Renderer</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\preview_placeholder.png" />
