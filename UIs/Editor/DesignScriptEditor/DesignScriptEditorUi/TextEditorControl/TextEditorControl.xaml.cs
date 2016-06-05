@@ -440,7 +440,18 @@ namespace DesignScript.Editor
 
         private void OnStartUpWorkerRunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            this.Dispatcher.BeginInvoke(new System.Action(this.FinalizeStartUpScreen));
+            // Check if IDE was launched as stand alone or from the graph environment
+            bool isIDEStandAlone = false;
+            if (isIDEStandAlone)
+            {
+                // Launch as stand alone
+                this.Dispatcher.BeginInvoke(new System.Action(this.FinalizeStartUpScreen));
+            }
+            else
+            {
+                // Launch from graph environment
+                this.Dispatcher.BeginInvoke(new System.Action(this.LoadGraphEnvironmentFile));
+            }
         }
 
         private void OnStartUpIconClick(object sender, MouseButtonEventArgs e)
@@ -1437,6 +1448,18 @@ namespace DesignScript.Editor
             // thread, we'll go ahead and finalize the start-up screen for display.
             if (false != textEditorInitialized)
                 startUpWorker.FinalizeStartUpScreen();
+        }
+
+        private void LoadGraphEnvironmentFile()
+        {
+            // Load the files from the fixed specified directory 
+            // where all scripts from the graph environemtn are saved
+            if (false != textEditorInitialized)
+            {
+                // Jun: For consistency we still initialize the startup screen
+                startUpWorker.FinalizeStartUpScreen();
+                startUpWorker.LoadGraphEnvironmentFile();
+            }
         }
 
         private delegate void DoScheduledExecutionDelegate(bool debugMode);

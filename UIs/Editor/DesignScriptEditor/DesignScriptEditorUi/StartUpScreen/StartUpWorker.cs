@@ -25,6 +25,16 @@ namespace DesignScript.Editor.StartUp
             this.DoWork += new DoWorkEventHandler(OnstartUpWorkerDoWork);
         }
 
+        internal bool LoadGraphEnvironmentFile()
+        {
+            string filePath = "C:\\jun\\testDS.ds";
+            if (TextEditorControl.Instance.TextCore.LoadScriptFromFile(filePath))
+            {
+                TextEditorControl.Instance.SetupTabInternal(filePath);
+            }
+            return true;
+        }
+
         internal bool FinalizeStartUpScreen()
         {
             if (false != startUpScreenFinalized)
