@@ -139,10 +139,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <Reference Include="ProtoInterface">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>$(FINAL_BIN)\ProtoInterface.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -202,6 +198,11 @@
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="app.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\ProtoInterface\ProtoInterface.csproj">
+      <Project>{9ec0521f-84da-4196-b0bc-34e4049e50bd}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

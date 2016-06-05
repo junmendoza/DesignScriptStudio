@@ -68,6 +68,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>$(FINAL_BIN)\GraphToDSCompiler.dll</HintPath>
     </Reference>
+    <Reference Include="nunit.framework, Version=3.2.1.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\NUnit-2.6.2\bin\framework\nunit.framework.dll</HintPath>
+    </Reference>
     <Reference Include="ProtoCore">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>$(FINAL_BIN)\ProtoCore.dll</HintPath>
@@ -75,9 +79,6 @@
     <Reference Include="DesignScriptStudio.Renderer">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>$(FINAL_BIN)\DesignScriptStudio.Renderer.dll</HintPath>
-    </Reference>
-    <Reference Include="nunit.framework">
-      <HintPath>$(NunitPath)</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
