@@ -27,10 +27,36 @@ namespace DesignScript.Editor.StartUp
 
         internal bool LoadGraphEnvironmentFile()
         {
-            string filePath = "C:\\jun\\testDS.ds";
-            if (TextEditorControl.Instance.TextCore.LoadScriptFromFile(filePath))
-            {
-                TextEditorControl.Instance.SetupTabInternal(filePath);
+            //string filePath = "C:\\jun\\testDS.ds";
+            //if (TextEditorControl.Instance.TextCore.LoadScriptFromFile(filePath))
+            //{
+            //    TextEditorControl.Instance.SetupTabInternal(filePath);
+            //}
+
+            //proc LoadCbnDsFiles()
+            //    filename = GenerateFirstDSFileName(0)
+            //    dsFile = file.open(filename))
+            //    n = 1
+            //    while (dsFile.exists)
+            //        ideTAB.add(dsFile)
+            //        filename = GenerateFirstDSFileName(n++)
+            //         = file.open(filename))
+            //        end while
+            //end proc
+
+            int n = 0;
+            string path = @"C:\jun\AutogenDSFiles\";
+            string cbnFileName = "CBN_DS_" + n++.ToString() + ".ds";
+            string pathFilename = path + cbnFileName;
+
+            bool fileExists = TextEditorControl.Instance.TextCore.LoadScriptFromFile(pathFilename);
+            while(fileExists)
+            { 
+                TextEditorControl.Instance.SetupTabInternal(pathFilename);
+                path = @"C:\jun\AutogenDSFiles\";
+                cbnFileName = "CBN_DS_" + n++.ToString() + ".ds";
+                pathFilename = path + cbnFileName;
+                fileExists = TextEditorControl.Instance.TextCore.LoadScriptFromFile(pathFilename);
             }
             return true;
         }
