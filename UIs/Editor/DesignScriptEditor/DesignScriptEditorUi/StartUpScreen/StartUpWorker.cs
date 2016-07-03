@@ -25,7 +25,7 @@ namespace DesignScript.Editor.StartUp
             this.DoWork += new DoWorkEventHandler(OnstartUpWorkerDoWork);
         }
 
-        internal bool LoadGraphEnvironmentFile()
+        internal bool LoadGraphEnvironmentFile(string[] args)
         {
             //string filePath = "C:\\jun\\testDS.ds";
             //if (TextEditorControl.Instance.TextCore.LoadScriptFromFile(filePath))
@@ -44,19 +44,18 @@ namespace DesignScript.Editor.StartUp
             //        end while
             //end proc
 
+            // The first arg is always the path to the DS CBN files
             int n = 0;
-            string path = @"C:\jun\AutogenDSFiles\";
+            string path = @args[0] + @"\";
             string cbnFileName = "CBN_DS_" + n++.ToString() + ".ds";
             string pathFilename = path + cbnFileName;
-
-            bool fileExists = TextEditorControl.Instance.TextCore.LoadScriptFromFile(pathFilename);
+            bool fileExists = System.IO.File.Exists(pathFilename);
             while(fileExists)
             { 
                 TextEditorControl.Instance.SetupTabInternal(pathFilename);
-                path = @"C:\jun\AutogenDSFiles\";
                 cbnFileName = "CBN_DS_" + n++.ToString() + ".ds";
                 pathFilename = path + cbnFileName;
-                fileExists = TextEditorControl.Instance.TextCore.LoadScriptFromFile(pathFilename);
+                fileExists = System.IO.File.Exists(pathFilename);
             }
             return true;
         }

@@ -442,6 +442,10 @@ namespace DesignScript.Editor
         {
             // Check if IDE was launched as stand alone or from the graph environment
             bool isIDEStandAlone = false;
+            string[] args = hostApplication.GetApplicationArguments();
+
+            // If there are now args, then it is just normal mode
+            isIDEStandAlone = args.Length == 0;
             if (isIDEStandAlone)
             {
                 // Launch as stand alone
@@ -1458,7 +1462,7 @@ namespace DesignScript.Editor
             {
                 // Jun: For consistency we still initialize the startup screen
                 startUpWorker.FinalizeStartUpScreen();
-                startUpWorker.LoadGraphEnvironmentFile();
+                startUpWorker.LoadGraphEnvironmentFile(hostApplication.GetApplicationArguments());
             }
         }
 
