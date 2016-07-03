@@ -396,31 +396,42 @@ namespace DesignScript.Editor
             //Get command line arguments
             string[] arguments = hostApplication.GetApplicationArguments();
 
-            if (arguments != null && (arguments.Length > 0))
+            // Jun: the IDE depends on the args for some obsolete purpose
+            // Follow the initialization code path where no args are provided
+            bool setupNormal = true;
+            if (setupNormal)
             {
-                if (arguments[0] == "/mad")
-                    isGeneratorOn = true;
-                else
-                {
-                    player = new CommandPlayer(this, textCore);
-                    player.SetApplicationArguments(arguments);
-                    player.BeginPlayback();
-                }
-            }
-
-            if (arguments == null || isGeneratorOn)
-            {
-                //textCore.CreateNewScript();
-                //SetupTabInternal(null);
-
-                // Instantiating Stress Testing Generator
-                if (isGeneratorOn == true)
-                {
-                    Generator generator = new Generator(arguments, this.textCore, this);
-                }
-
                 grid.UpdateLayout();
                 textCanvas.Focus();
+            }
+            else
+            {
+                if (arguments != null && (arguments.Length > 0))
+                {
+                    if (arguments[0] == "/mad")
+                        isGeneratorOn = true;
+                    else
+                    {
+                        player = new CommandPlayer(this, textCore);
+                        player.SetApplicationArguments(arguments);
+                        player.BeginPlayback();
+                    }
+                }
+
+                if (arguments == null || isGeneratorOn)
+                {
+                    //textCore.CreateNewScript();
+                    //SetupTabInternal(null);
+
+                    // Instantiating Stress Testing Generator
+                    if (isGeneratorOn == true)
+                    {
+                        Generator generator = new Generator(arguments, this.textCore, this);
+                    }
+
+                    grid.UpdateLayout();
+                    textCanvas.Focus();
+                }
             }
 
             // Start with a blank new file on startup
@@ -441,7 +452,7 @@ namespace DesignScript.Editor
         private void OnStartUpWorkerRunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             // Check if IDE was launched as stand alone or from the graph environment
-            bool isIDEStandAlone = false;
+            bool isIDEStandAlone = true;
             string[] args = hostApplication.GetApplicationArguments();
 
             // If there are now args, then it is just normal mode

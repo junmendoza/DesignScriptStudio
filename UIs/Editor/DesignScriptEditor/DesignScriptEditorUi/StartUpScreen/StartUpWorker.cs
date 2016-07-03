@@ -49,13 +49,13 @@ namespace DesignScript.Editor.StartUp
             string path = @args[0] + @"\";
             string cbnFileName = "CBN_DS_" + n++.ToString() + ".ds";
             string pathFilename = path + cbnFileName;
-            bool fileExists = System.IO.File.Exists(pathFilename);
-            while(fileExists)
-            { 
+            bool fileExists = TextEditorControl.Instance.TextCore.LoadScriptFromFile(pathFilename);
+            while (fileExists)
+            {
                 TextEditorControl.Instance.SetupTabInternal(pathFilename);
                 cbnFileName = "CBN_DS_" + n++.ToString() + ".ds";
                 pathFilename = path + cbnFileName;
-                fileExists = System.IO.File.Exists(pathFilename);
+                fileExists = TextEditorControl.Instance.TextCore.LoadScriptFromFile(pathFilename);
             }
             return true;
         }
