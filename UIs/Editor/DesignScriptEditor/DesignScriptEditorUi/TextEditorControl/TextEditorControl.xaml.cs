@@ -445,7 +445,7 @@ namespace DesignScript.Editor
             string[] args = hostApplication.GetApplicationArguments();
 
             // If there are now args, then it is just normal mode
-            isIDEStandAlone = args.Length == 0;
+            isIDEStandAlone = args == null || args.Length == 0;
             if (isIDEStandAlone)
             {
                 // Launch as stand alone
